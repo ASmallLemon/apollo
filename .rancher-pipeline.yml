@@ -1,0 +1,10 @@
+stages:
+- name: compile
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: app:v1
+      pushRemote: true
+      registry: 127.0.0.1:34368
+timeout: 60
